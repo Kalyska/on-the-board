@@ -1,0 +1,21 @@
+/* variables couleurs */
+:root{
+    --color-primary: #2A4F6E;
+    --color-secondary: #FF5B00;
+    --color-tertiary: #FFFCD1;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-color: black;
+}
+
+header{
+    /* background-color: var(--color-primary); */
+}
