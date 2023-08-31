@@ -12,10 +12,28 @@
     font-family: 'Roboto', sans-serif;
 }
 
-body{
-    background-color: black;
+main{
+    margin: 6rem auto;
 }
 
-header{
-    /* background-color: var(--color-primary); */
+/**************** page library ********************/
+
+.new-games{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 2rem;
+}
+
+.new-game{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.new-game img{
+    width: 150px;
+    height: 150px;
 }
