@@ -7,7 +7,7 @@ const StyledMenu = styled.nav`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: #effffa;
+  background: #2A4F6E;
   transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-100%)")};
   height: 100vh;
   text-align: left;
@@ -16,18 +16,19 @@ const StyledMenu = styled.nav`
   top: 0;
   left: 0;
   transition: transform 0.3s ease-in-out;
+  z-index: 9;
 
   @media (max-width: 576px) {
     width: 100%;
   }
 
   a {
-    font-size: 2rem;
+    font-size: 1.2rem;
     text-transform: uppercase;
     padding: 2rem 0;
     font-weight: bold;
     letter-spacing: 0.5rem;
-    color: #0d0c1d;
+    color: #FFFCD1;
     text-decoration: none;
     transition: color 0.3s linear;
 
@@ -37,27 +38,28 @@ const StyledMenu = styled.nav`
     }
 
     &:hover {
-      color: #343078;
+      color: #FF5B00;
     }
   }
 `;
 
 const SideBar = ({ open }) => {
+
   return (
     <StyledMenu open={open}>
       <a href="/">
-        <span role="img" aria-label="about us">
+        <span role="img" aria-label="home">
         <MdRestaurantMenu/>
         </span>
         Accueil
       </a>
-      <a href="/">
-        <span role="img" aria-label="price">
+      <a href="/library">
+        <span role="img" aria-label="library">
             <FaDice/>
         </span>
         Ludothèque
       </a>
-      <a href="/">
+      <a href="/contact">
         <span role="img" aria-label="contact">
           <MdMail/>
         </span>
