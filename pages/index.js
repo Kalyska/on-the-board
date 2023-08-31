@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import React from "react";
-import { useRouter } from 'next/router';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import Image from 'next/image';
 
 export default function Home() {
 
@@ -15,17 +15,17 @@ export default function Home() {
         <link rel="icon" href="/favicon.png" />
       </Head>
 
-      <Header />
+        <Header />
 
-      <main className='main'>
-        <div className='container'>
-            <h1>Test</h1>
-        </div>
+        <main className='main home'>
+          <h1>Bienvenue à bord !</h1>
 
+          <p>On The Board est un bar à jeux fictif, créé dans le cadre d'un projet de formation.</p>
 
-      </main>
+          <img src='/img/otb.webp' alt='On The Board' height={450} />
+        </main>
 
-      <Footer />
+        <Footer />
     </>
   )
 }
