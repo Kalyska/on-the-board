@@ -3,6 +3,7 @@
     --color-primary: #2A4F6E;
     --color-secondary: #FF5B00;
     --color-tertiary: #FFFCD1;
+    --color-text-primary: white;
 }
 
 *{
@@ -13,7 +14,131 @@
 }
 
 main{
-    margin: 6rem auto;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+min-height: 86.4vh;
+}
+
+/****************** header & footer **********************/
+
+header{
+    padding: 1rem 2rem;
+    background-color: var(--color-primary);
+    color: var(--color-text-primary);
+}
+
+nav ul{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+}
+
+nav ul li{
+    margin-left: 1.8rem;
+    font-size: 1.2rem;
+}
+
+nav ul li a{
+    color: var(--color-text-primary);
+    text-decoration: none;
+    margin-left: .2rem;
+}
+
+nav ul li a:hover{
+    color: var(--color-secondary);
+}
+
+footer{
+    margin: 2rem auto 0;
+    padding: .5rem;
+    background-color: var(--color-primary);
+    color: var(--color-text-primary);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items:baseline;
+}
+
+footer span{
+    margin-left: .5rem;
+}
+
+/****************** titres **********************/
+
+h1{
+    font-size: 2rem;
+    margin: 1rem;
+    text-align: center;
+    color: var(--color-secondary);
+}
+h2{
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 1rem;
+    color: var(--color-secondary);
+}
+
+p, span{
+    font-size: 1.2rem;
+}
+
+/****************** boutons **********************/
+
+button{
+    margin: 1rem;
+    padding: .5rem;
+    border-radius: 5px;
+    box-shadow: #2A4F6E 0px 0px 10px 0px;
+    background-color: var(--color-primary);
+    color: var(--color-text-primary);
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    width: 200px;
+    margin: 2rem auto;
+}
+
+button:hover{
+    background-color: var(--color-secondary);
+    scale: 1.02;
+}
+
+.back-link{
+    margin: 1rem;
+    padding: .5rem;
+    border-radius: 5px;
+    box-shadow: #2A4F6E 0px 0px 10px 0px;
+    background-color: var(--color-primary);
+    color: var(--color-text-primary);
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    width: 200px;
+    margin: 2rem auto;
+    text-decoration: none;
+    text-align: center;
+}
+
+.back-link:hover{
+    background-color: var(--color-secondary);
+    scale: 1.02;
+}
+
+/****************** page home **********************/
+
+.home img{
+max-height: 60%;
+width: auto;
+box-shadow: #2A4F6E 0px 0px 10px 0px;
+border-radius: 20px;
+}
+
+.home p{
+    margin: 2rem;
+    text-align: justify;
 }
 
 /**************** page library ********************/
@@ -23,17 +148,81 @@ main{
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 2rem;
 }
 
 .new-game{
+    margin: 2rem;
+    padding: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: #2A4F6E 0px 0px 10px 0px;
+    border-radius: 20px;
+    text-align: center;
+    width: 300px;
+    height: 300px;
+}
+
+.new-game img{
+    width: 150px;
+    height: 150px;
+}
+
+/****************** page game **********************/
+
+.game-display{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.new-game img{
-    width: 150px;
-    height: 150px;
+.game-infos{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 1.2rem;
+}
+
+.game-infos p{
+    margin:  .5rem;
+}
+
+.game-infos p span{
+    margin-left: .5rem;
+}
+
+.description{
+    margin: 2rem;
+    text-align: justify;
+}
+
+/****************** page contact **********************/
+
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.flex-form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.flex-form input, .flex-form textarea{
+    border: none;
+    margin: .5rem;
+    padding: .5rem;
+    border-radius: 5px;
+    box-shadow: #2A4F6E 0px 0px 10px 0px;
+}
+
+.flex-form input:focus, .flex-form textarea:focus{
+    outline: none;
+    background-color: var(--color-tertiary);
 }

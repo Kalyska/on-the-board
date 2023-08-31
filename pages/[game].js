@@ -1,13 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import newgames from './api/newgames';
+import { BsFillPersonPlusFill } from 'react-icons/bs';
+import { IoIosTimer } from 'react-icons/io';
 
 const Game = ({ data }) => {
-    const game = data
+    const game = data;
     if (!game) {
-        // retourner une page 404
         return (
             <>
                 <main className='main'>
@@ -19,29 +20,34 @@ const Game = ({ data }) => {
     }
 
     return (
-        <div>
+        <>
             <Header />
 
             <main className='main'>
-                {/* un display avec le name, une image, une div avec min et max joueurs, la durée, la description */}
                 <div className='game-display'>
                     <h1>{game.name}</h1>
 
                     <Image src={`/img/${game.img[0]}`} alt={game.name} width={300} height={300} />
-                    
+
                     <div className='game-infos'>
-                        <p>Nombre de joueurs : {game.min} à {game.max}</p>
-                        <p>Durée : {game.time} minutes</p>
-                    </div>    
-                    
-                    <p>{game.description}</p> 
+                        <p>
+                            <BsFillPersonPlusFill />
+                            <span>{game.min} à {game.max} joueurs</span>
+                        </p>
+                        <p>
+                            <IoIosTimer />
+                            <span>{game.time} minutes</span>
+                        </p>
+                    </div>
+
+                    <p className='description'>{game.description}</p>
                 </div>
 
-                <a href='/library'>Retour</a>
+                <a className='back-link' href='/library'>Retour</a>
             </main>
 
             <Footer />
-        </div>
+        </>
     )
 
 }
