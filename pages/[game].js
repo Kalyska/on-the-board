@@ -5,6 +5,7 @@ import Footer from '../components/Footer';
 import newgames from './api/newgames';
 import { BsFillPersonPlusFill } from 'react-icons/bs';
 import { IoIosTimer } from 'react-icons/io';
+import GameCarousel from '../components/GameCarousel';
 
 const Game = ({ data }) => {
     const game = data;
@@ -27,7 +28,8 @@ const Game = ({ data }) => {
                 <div className='game-display'>
                     <h1>{game.name}</h1>
 
-                    <Image src={`/img/${game.img[0]}`} alt={game.name} width={300} height={300} />
+                    {/* <Image src={`/img/${game.img[0]}`} alt={game.name} width={300} height={300} /> */}
+                    <GameCarousel  game={game} />
 
                     <div className='game-infos'>
                         <p>
